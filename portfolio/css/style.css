@@ -1,6 +1,7 @@
 body {
   font-family: "Oswald", "Noto Sans JP", sans-serif;
   color: #333;
+  background-color: #FFF4E0;
 }
 body.is-fixed {
   overflow: hidden;
@@ -14,10 +15,10 @@ body.is-fixed {
   margin: 0 auto;
 }
 .button--bg {
-  background-color: #fff;
+  background-color: #F99292;
 }
 .button--bg .button__text {
-  color: #4a4a4a;
+  color: #fff;
 }
 .button--border {
   border: 1px solid #fff;
@@ -34,7 +35,7 @@ body.is-fixed {
   fill: #fff;
 }
 .button__icon-path--contact {
-  fill: #4a4a4a;
+  fill: #fff;
 }
 .button__text {
   margin-left: 10px;
@@ -44,7 +45,7 @@ body.is-fixed {
 }
 
 .header {
-  background-color: #4a4a4a;
+  background-color: #FFBC61;
   position: fixed;
   top: 0;
   left: 0;
@@ -140,27 +141,6 @@ body.is-fixed {
   margin-top: 40px;
 }
 
-.service__item + .service__item {
-  margin-top: 40px;
-}
-.service__item-img {
-  text-align: center;
-  margin-bottom: 14px;
-}
-.service__item-name {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.service__item-text {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.works {
-  background-color: #fafafa;
-}
 .works__item + .works__item {
   margin-top: 40px;
 }
@@ -180,6 +160,9 @@ body.is-fixed {
   font-size: 14px;
 }
 
+.about {
+  background-color: #FFC679;
+}
 .about__img {
   margin-bottom: 32px;
 }
@@ -192,49 +175,6 @@ body.is-fixed {
 }
 .about__text + .about__text {
   margin-top: 1em;
-}
-
-.flow {
-  background-color: #fafafa;
-}
-.flow__list {
-  margin-top: 64px;
-}
-.flow__item {
-  position: relative;
-  border: 1px solid #808080;
-  padding: 46px 16px 24px;
-}
-.flow__item + .flow__item {
-  margin-top: 46px;
-}
-.flow__item-num {
-  position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background-color: #4a4a4a;
-  color: #fff;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.flow__item-img {
-  margin-bottom: 24px;
-  text-align: center;
-}
-.flow__item-name {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.flow__item-text {
-  font-size: 14px;
-  line-height: 1.6;
 }
 
 .message__img {
@@ -255,10 +195,25 @@ body.is-fixed {
   padding: 40px;
 }
 .page-bottom__item--contact {
-  background-color: #6f6f6f;
+  background-color: #FFC679;
 }
-.page-bottom__item--twitter {
-  background-color: #4a4a4a;
+.page-bottom__text {
+  color: #333;
+  text-align: center;
+}
+.page-bottom .contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F99292;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+.page-bottom .contact-button:hover {
+  background-color: #fff;
+  color: #4a4a4a;
 }
 
 .footer {
@@ -270,15 +225,18 @@ body.is-fixed {
   font-family: "Noto Sans JP", sans-serif;
 }
 
-/*--------------------------
-// pc
---------------------------*/
-@media screen and (min-width: 768px) {
+/*--------------------------------------------
+//pc
+--------------------------------------------*/
+@media screen and (min-width:768px) {
   .wrapper {
     display: flex;
   }
   .main {
     flex-basis: 79.2%;
+  }
+  body {
+    margin: 0;
   }
   .header {
     position: relative;
@@ -300,8 +258,8 @@ body.is-fixed {
     display: none;
   }
   .header__contents {
-    border: none;
     display: block;
+    border: none;
   }
   .button {
     transition: background 0.3s, color 0.3s, opacity 0.3s;
@@ -315,10 +273,10 @@ body.is-fixed {
   .button:hover .button__text {
     color: #4a4a4a;
   }
-  .button--bg {
+  .button__bg {
     color: #4a4a4a;
   }
-  .button--bg:hover {
+  .button__bg:hover {
     opacity: 0.7;
   }
   .section__inner {
@@ -362,22 +320,10 @@ body.is-fixed {
     flex-direction: row-reverse;
     gap: 40px;
   }
-  .flow__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  .flow__item + .flow__item {
-    margin-top: 0;
-  }
   .message__container {
     display: flex;
     flex-direction: row-reverse;
     gap: 40px;
-  }
-  .page-bottom {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
   .page-bottom__item {
     padding: 54px 10px;
@@ -386,7 +332,7 @@ body.is-fixed {
 /*--------------------------
 // tb
 --------------------------*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
   .section__head-main {
     font-size: 54px;
   }
