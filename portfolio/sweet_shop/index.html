@@ -19,15 +19,15 @@
             <div class="header-logo"><img src="./img/logo.svg" alt="Sweet Delight"></div>
             <ul class="header-nav-list">
                 <li class="header-nav-item">
-                    <a href="#about" class="header-nav-limk">About</a>
+                    <a href="#about" class="header-nav-link">About</a>
                 </li>
                 <li class="header-nav-item" id="toggle">
                         <a href="#menu" class="header-nav-link">Menu</a>
                         <!-- ドロワーメニュー -->
                         <ul class="toggle-list">
-                            <li><a href="#">新発売</a></li>
-                            <li><a href="#">おすすめ</a></li>
-                            <li><a href="#">期間限定</a></li>
+                            <li><a href="#menu1">新発売</a></li>
+                            <li><a href="#menu2">おすすめ</a></li>
+                            <li><a href="#menu3">期間限定</a></li>
                         </ul>
                 </li>
                 <li class="header-nav-item">
@@ -73,7 +73,7 @@
             <div class="menu-contents">
                 <ul class="menu-list">
                     <li class="menu-item">
-                        <div class="menu-img"><img src="./img/menu1.png" alt="おすすめ　ストロベリーケーキ"></div>
+                        <div class="menu-img" id="menu1"><img src="./img/menu1.png" alt="おすすめ　ストロベリーケーキ"></div>
                         <div class="menu-text-contents">
                             <h3 class="menu-name">
                                 <span class="menu-name-main">ストロベリーケーキ</span>
@@ -83,7 +83,7 @@
                         </div>
                     </li>
                     <li class="menu-item">
-                        <div class="menu-img"><img src="./img/menu2.png" alt="新発売　ブルーベリーチーズケーキ"></div>
+                        <div class="menu-img" id="menu2"><img src="./img/menu2.png" alt="新発売　ブルーベリーチーズケーキ"></div>
                         <div class="menu-text-contents">
                             <h3 class="menu-name">
                                 <span class="menu-name-main">ブルーベリーチーズケーキ</span>
@@ -93,7 +93,7 @@
                         </div>
                     </li>
                     <li class="menu-item">
-                        <div class="menu-img"><img src="./img/menu3.png" alt="おすすめ　チョコレートケーキ"></div>
+                        <div class="menu-img" id="menu3"><img src="./img/menu3.png" alt="おすすめ　チョコレートケーキ"></div>
                         <div class="menu-text-contents">
                             <h3 class="menu-name">
                                 <span class="menu-name-main">チョコレートケーキ</span>
@@ -110,7 +110,7 @@
         <div class="overlay" id="js-overlay"></div>
         <!-- モーダル(画像拡大表示場所) -->
         <div class="modal" id="js-modal">
-            <img src="" alt="" id="open-img">
+            <img src="#" alt="" id="open-img">
         </div>
      </section>
     <!-- shopセクション -->

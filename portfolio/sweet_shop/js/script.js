@@ -2,6 +2,7 @@ jQuery("#toggle").click(function(){
     jQuery(".toggle-list").slideToggle();
 });
 
+
 jQuery(".page-top").click(function(){
     jQuery("html, body").animate({ scrollTop: 0 }, 500);
 });
@@ -27,24 +28,25 @@ jQuery(".page-top").hover(
     }
 );
 
-$(function(){
+    $(function(){
 
-    const modal = $("#js-modal");
-    const overlay = $("#js-overlay");
-    const overImg =$('#open-img');
-    const miniImg =$('.menu-img img');
+        const modal = $("#js-modal");
+        const overlay = $("#js-overlay");
+        const overImg =$('#open-img');
+        const miniImg =$('.menu-img img');
 
-    miniImg.click(function(){
-       const index = miniImg.index(this);
-       overImg.attr('src',$(miniImg[index]).attr('src'));
-       modal.fadeIn('slow');
-       overlay.fadeIn('slow');
-       return false;
-   });
+        miniImg.click(function(){
+        const index = miniImg.index(this);
+        overImg.attr('src',$(miniImg[index]).attr('src'));
+        modal.fadeIn('slow');
+        overlay.fadeIn('slow');
+        return false;
+    });
 
-   $(window).click(function () {
-           modal.fadeOut('slow');
-           overlay.fadeOut('slow');
-           return false;
-         });
+   $(window).click(function(event) {
+            modal.fadeOut('slow');  // モーダル非表示
+            overlay.fadeOut('slow');  // オーバーレイ非表示
+    });
+
+
 });
